@@ -8,7 +8,7 @@ services:
      - 2888:2888
      - 3888:3888
     networks:
-     - hoangnv_mongodb_connect
+     - edsolabsai_mongo_sync
 
   kafka:
     image: debezium/kafka:1.7
@@ -16,7 +16,7 @@ services:
     ports:
      - 15243:15243
     networks:
-     - hoangnv_mongodb_connect
+     - edsolabsai_mongo_sync
     links:
      - zookeeper
     environment:
@@ -34,7 +34,7 @@ services:
     ports:
      - 9876:27017
     networks:
-     - hoangnv_mongodb_connect
+     - edsolabsai_mongo_sync
     environment:
      - MONGODB_USER=edsolabs
      - MONGODB_PASSWORD=edso
@@ -45,7 +45,7 @@ services:
     ports:
      - 8084:8083
     networks:
-     - hoangnv_mongodb_connect 
+     - edsolabsai_mongo_sync 
     links:
      - kafka
      - mongodb
@@ -57,6 +57,6 @@ services:
      - STATUS_STORAGE_TOPIC=my_source_connect_statuses
 
 networks:
-  hoangnv_mongodb_connect:
+  edsolabsai_mongo_sync:
     external: true
-    name: hoangnv
+    name: edsolabsai
