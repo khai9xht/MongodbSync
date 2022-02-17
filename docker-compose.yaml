@@ -4,7 +4,7 @@ services:
     image: debezium/zookeeper:1.7
     container_name: debezium_zookeeper
     ports:
-     - 2181:2181
+     - 2183:2181
      - 2888:2888
      - 3888:3888
     networks:
@@ -25,7 +25,7 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_ALLOW_PLAINTEXT_LISTENER: "yes"
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:7395,PLAINTEXT_HOST://192.168.50.17:15243
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:7395,PLAINTEXT_HOST://192.168.50.20:15243
   mongodb:
     image: debezium/mongodb:1.7
     build: 

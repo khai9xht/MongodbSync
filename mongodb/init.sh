@@ -52,7 +52,7 @@ EOF
 
 echo "Created users"
 
-mongo -u admin -p admin --authenticationDatabase admin localhost:27017/PersonRepresentation <<-EOF
+mongo -u edsolabs -p edso --authenticationDatabase admin localhost:27017/PersonRepresentation <<-EOF
     use PersonRepresentation;
     db.createCollection("Person");
 
