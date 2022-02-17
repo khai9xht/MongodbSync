@@ -16,5 +16,5 @@
 		- Config để debezium check mongo database trong file mongodb-source.json. Chỉnh sử IP, Port, database name, collection name, user, password tương ứng với config trong docker-compose.yaml</br>
 		- chạy debezium trigger check oplog mongodb</br>
 		```curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json" http://{IP}:{Port}/connectors/ -d @mongodb-source.json```</br>
-		Với IP là ip của máy chủ, port là port của connect container (xem trong docker-compose.yaml)
-		- khởi tạo 1 document bất kì trong database dể kafka tạo topic và thiết lập giám sát.
+			Với IP là ip của máy chủ, port là port của connect container (xem trong docker-compose.yaml)</br>
+		- Khởi tạo 1 document bất kì trong database dể kafka tạo topic và thiết lập giám sát.
